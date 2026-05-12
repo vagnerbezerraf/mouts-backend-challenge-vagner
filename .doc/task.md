@@ -1,0 +1,26 @@
+# Task: Implement Sales API
+
+- [x] **Domain Layer**
+  - [x] Create `SaleStatus` enum (optional or just boolean) -> Actually, we need `IsCancelled`.
+  - [x] Create `SaleItem` entity.
+  - [x] Create `Sale` entity.
+  - [x] Create domain events (`SaleCreatedEvent`, `SaleModifiedEvent`, `SaleCancelledEvent`, `ItemCancelledEvent`).
+  - [x] Create `ISaleRepository` interface.
+  - [x] Create FluentValidation rules (`SaleValidator`, `SaleItemValidator`).
+- [x] **Application Layer**
+  - [x] Create CQRS logic for CreateSale (`CreateSaleCommand`, `CreateSaleHandler`, etc.).
+  - [x] Create CQRS logic for GetSale.
+  - [x] Create CQRS logic for UpdateSale.
+  - [x] Create CQRS logic for DeleteSale (Cancel).
+  - [x] Create event handlers for Domain Events to log them.
+- [x] **ORM Layer**
+  - [x] Create `SaleConfiguration` and `SaleItemConfiguration`.
+  - [x] Update `DefaultContext.cs` with DbSets.
+  - [x] Implement `SaleRepository`.
+  - [x] Generate EF Core Migration (optional if I can't run the tool, I might just leave the context updated).
+- [x] **WebApi Layer**
+  - [x] Create `SalesController`.
+  - [x] Create Request/Response DTOs and Profiles.
+- [x] **Verification**
+  - [x] Build solution.
+  - [x] Write Unit Tests.
